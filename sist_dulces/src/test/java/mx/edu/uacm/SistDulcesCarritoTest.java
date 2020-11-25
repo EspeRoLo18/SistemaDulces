@@ -7,6 +7,7 @@ import java.util.Iterator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,6 +25,10 @@ public class SistDulcesCarritoTest {
 	
 	private Carrito carrito;
 	
+//	@BeforeEach
+//	void setUp() throws Exception {
+//		carrito = new Carrito();
+//	}
 	
 	@Test
 	@Order(1)
@@ -36,7 +41,8 @@ public class SistDulcesCarritoTest {
 			
 		} catch (Exception e) {
 			log.debug(e);
-			assertEquals(e.getMessage(), "El vendible es nulo :(");
+//			assertEquals(e.getMessage(), "El vendible es nulo :(");
+			fail(e.getMessage());
 		}
 	}
 	
@@ -65,7 +71,8 @@ public class SistDulcesCarritoTest {
 			carrito.eliminar(-1);
 		} catch (Exception e) {
 			log.debug(e);
-			assertEquals(e.getMessage(), "La posicion es < 0 :(");
+//			assertEquals(e.getMessage(), "La posicion es < 0 :(");
+			fail(e.getMessage());
 		}
 	}
 	
@@ -80,7 +87,8 @@ public class SistDulcesCarritoTest {
 			carrito.eliminar(20);
 		} catch (Exception e) {
 			log.debug(e);
-			assertEquals(e.getMessage(), "La posicion sobrepasa el limite :(");
+//			assertEquals(e.getMessage(), "La posicion sobrepasa el limite :(");
+			fail(e.getMessage());
 		}
 	}
 	

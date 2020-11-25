@@ -36,7 +36,8 @@ public class SistDulcesCatalogoTest {
 			catalogo.agregar(p);
 		} catch (Exception e) {
 			log.debug(e.getMessage());
-			assertEquals("El producto es nulo :(", e.getMessage());
+//			assertEquals("El producto es nulo :(", e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 	
@@ -71,7 +72,8 @@ public class SistDulcesCatalogoTest {
 			catalogo.eliminar(p);
 		} catch (Exception e) {
 			log.debug(e.getMessage());
-			assertEquals("El producto es nulo :(", e.getMessage());
+//			assertEquals("El producto es nulo :(", e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 	/**
@@ -90,7 +92,8 @@ public class SistDulcesCatalogoTest {
 			Producto regresa = catalogo.obtenerProducto(0);
 		} catch (Exception e) {
 			log.debug(e.getMessage());
-			assertEquals("La posicion es > tama\\u00f1o del catalogo :(", e.getMessage());
+//			assertEquals("La posicion es > tama\\u00f1o del catalogo :(", e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 	/**
@@ -112,7 +115,8 @@ public class SistDulcesCatalogoTest {
 			Producto regresa = catalogo.obtenerProducto(-1);
 		} catch (Exception e) {
 			log.debug(e.getMessage());
-			assertEquals("La posicion es < 0 :(", e.getMessage());
+//			assertEquals("La posicion es < 0 :(", e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 	
@@ -136,7 +140,8 @@ public class SistDulcesCatalogoTest {
 			Producto regresa = catalogo.obtenerProducto(11);
 		} catch (Exception e) {
 			log.debug(e.getMessage());
-			assertEquals("La posicion es > tamaño del catalogo :(", e.getMessage());
+//			assertEquals("La posicion es > tamaño del catalogo :(", e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 	
